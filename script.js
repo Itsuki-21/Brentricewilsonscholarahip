@@ -60,3 +60,24 @@ window.addEventListener("scroll", () => {
 scrollBtn.addEventListener("click", () => {
     window.scrollTo({top:0, behavior:"smooth"});
 });
+// ================================
+// FAQ ACCORDION
+// ================================
+
+const accordionItems = document.querySelectorAll(".accordion-item");
+
+accordionItems.forEach(item => {
+    const header = item.querySelector(".accordion-header");
+
+    header.addEventListener("click", () => {
+        // Close all other items
+        accordionItems.forEach(acc => {
+            if (acc !== item) {
+                acc.classList.remove("active");
+            }
+        });
+
+        // Toggle the clicked item
+        item.classList.toggle("active");
+    });
+});
