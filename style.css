@@ -1721,6 +1721,10 @@ blockquote{
 
 }
 
-.accordion-item.active .accordion-content{
-    max-height:500px;
+.accordion-content {
+    display: none;
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
 }
