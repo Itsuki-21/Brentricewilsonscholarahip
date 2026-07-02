@@ -1707,3 +1707,7 @@ blockquote{
 }
 
 }
+
+.accordion-item.active .accordion-content{
+    max-height:500px;
+}
